@@ -11,7 +11,7 @@ function Parte2({ nextStep }) {
   return (
     <div className="container">
       <div className="card">
-        <img src={`${process.env.PUBLIC_URL}/jow.jpeg`} alt="Imagem divertida" />
+        <img src={`${process.env.PUBLIC_URL}/images/jow.jpeg`} alt="Imagem divertida" />
         <p>Fico feliz por verem vocês felizes, mais feliz seria se eu fosse convidado primeiramente e obviamente se eu estivesse com vocês</p>
       </div>
       <button id="nextButton" className="button" style={{ display: 'none' }} onClick={nextStep}>Próximo</button>

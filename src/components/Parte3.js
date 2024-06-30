@@ -7,8 +7,8 @@ function Parte3({ nextStep }) {
   const [buttonDisabled, setButtonDisabled] = useState(false);
 
   const images = [
-    { src: `${process.env.PUBLIC_URL}/antes.jpeg`, title: 'Antes' },
-    { src: `${process.env.PUBLIC_URL}/depois.jpeg`, title: 'Depois' },
+    { src: `${process.env.PUBLIC_URL}/images/antes.jpeg`, title: 'Antes' },
+    { src: `${process.env.PUBLIC_URL}/images/depois.jpeg`, title: 'Depois' },
   ];
 
   useEffect(() => {

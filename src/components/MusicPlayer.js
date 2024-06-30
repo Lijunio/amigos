@@ -6,7 +6,7 @@ function MusicPlayer() {
   useEffect(() => {
     const audioElement = audioRef.current;
     if (audioElement) {
-      audioElement.play();
+      audioElement.play().catch(error => console.log("Playback error:", error));
     }
 
     return () => {
@@ -17,8 +17,7 @@ function MusicPlayer() {
   }, []);
 
   return (
-    <audio ref={audioRef} loop>
-      <source src={`${process.env.PUBLIC_URL}/sua-musica.mp3`} type="audio/mpeg" />
+    <audio ref={audioRef} src={`${process.env.PUBLIC_URL}/images/amigo.mp3`} loop>
       Seu navegador não suporta o elemento de áudio.
     </audio>
   );

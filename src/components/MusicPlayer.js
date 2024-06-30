@@ -6,7 +6,11 @@ function MusicPlayer() {
   useEffect(() => {
     const audioElement = audioRef.current;
     if (audioElement) {
-      audioElement.play().catch(error => console.log("Playback error:", error));
+      audioElement.play().then(() => {
+        console.log("Audio playback started");
+      }).catch(error => {
+        console.log("Playback error:", error);
+      });
     }
 
     return () => {

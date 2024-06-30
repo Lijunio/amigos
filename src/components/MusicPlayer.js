@@ -28,7 +28,7 @@ function MusicPlayer() {
   return (
     <div>
       <audio ref={audioRef} src={`${process.env.PUBLIC_URL}/images/amigo.mp3`} loop />
-      {!isPlaying && <button onClick={handlePlay}>Play Music</button>}
+      {!isPlaying && <button className="button" onClick={handlePlay}>Play Music</button>}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Parte3.css'; 
+import './Parte3.css';
 
 function Parte3({ nextStep }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -7,8 +7,8 @@ function Parte3({ nextStep }) {
   const [buttonDisabled, setButtonDisabled] = useState(false);
 
   const images = [
-    { src: '/antes.jpeg', title: 'Antes' },
-    { src: '/depois.jpeg', title: 'Depois' },
+    { src: `${process.env.PUBLIC_URL}/antes.jpeg`, title: 'Antes' },
+    { src: `${process.env.PUBLIC_URL}/depois.jpeg`, title: 'Depois' },
   ];
 
   useEffect(() => {

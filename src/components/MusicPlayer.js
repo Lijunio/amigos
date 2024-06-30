@@ -18,7 +18,7 @@ function MusicPlayer() {
 
   return (
     <audio ref={audioRef} loop>
-      <source src="/amigo.mp3" type="audio/mpeg" />
+      <source src={`${process.env.PUBLIC_URL}/sua-musica.mp3`} type="audio/mpeg" />
       Seu navegador não suporta o elemento de áudio.
     </audio>
   );

@@ -149,6 +149,12 @@ p {
   font-size: 1.2em;
 }
 
+h1 {
+  background-color: #e0e0e0;
+  text-align: left; 
+  border-radius: 8px;
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);

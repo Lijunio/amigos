@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/amigos/static/css/main.7926226a.css",
-    "main.js": "/amigos/static/js/main.a18fe489.js",
+    "main.js": "/amigos/static/js/main.2fc1c428.js",
     "index.html": "/amigos/index.html",
     "main.7926226a.css.map": "/amigos/static/css/main.7926226a.css.map",
-    "main.a18fe489.js.map": "/amigos/static/js/main.a18fe489.js.map"
+    "main.2fc1c428.js.map": "/amigos/static/js/main.2fc1c428.js.map"
   },
   "entrypoints": [
     "static/css/main.7926226a.css",
-    "static/js/main.a18fe489.js"
+    "static/js/main.2fc1c428.js"
   ]
 }

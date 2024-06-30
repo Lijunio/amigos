@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/amigos/static/css/main.51287b0e.css",
+    "main.js": "/amigos/static/js/main.13967628.js",
+    "index.html": "/amigos/index.html",
+    "main.51287b0e.css.map": "/amigos/static/css/main.51287b0e.css.map",
+    "main.13967628.js.map": "/amigos/static/js/main.13967628.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51287b0e.css",
+    "static/js/main.13967628.js"
+  ]
+}

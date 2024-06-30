@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-function MusicPlayer() {
+function MusicPlayer({ onPlay }) {
   const audioRef = useRef(null);
-  const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlay = () => {
     const audioElement = audioRef.current;
     if (audioElement) {
       audioElement.play().then(() => {
-        setIsPlaying(true);
+        onPlay();
         console.log("Audio playback started");
       }).catch(error => {
         console.log("Playback error:", error);
@@ -28,7 +27,7 @@ function MusicPlayer() {
   return (
     <div>
       <audio ref={audioRef} src={`${process.env.PUBLIC_URL}/images/amigo.mp3`} loop />
-      {!isPlaying && <button className="button" onClick={handlePlay}>Play Music</button>}
+      <button className="button-play" onClick={handlePlay}>Clica nesse botão aqui para sentir remorso de não ter me convidado.</button>
     </div>
   );
 }

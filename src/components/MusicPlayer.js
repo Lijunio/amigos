@@ -1,19 +1,24 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 function MusicPlayer() {
   const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  useEffect(() => {
+  const handlePlay = () => {
     const audioElement = audioRef.current;
     if (audioElement) {
       audioElement.play().then(() => {
+        setIsPlaying(true);
         console.log("Audio playback started");
       }).catch(error => {
         console.log("Playback error:", error);
       });
     }
+  };
 
+  useEffect(() => {
     return () => {
+      const audioElement = audioRef.current;
       if (audioElement) {
         audioElement.pause();
       }
@@ -21,9 +26,10 @@ function MusicPlayer() {
   }, []);
 
   return (
-    <audio ref={audioRef} src={`${process.env.PUBLIC_URL}/images/amigo.mp3`} loop>
-      Seu navegador não suporta o elemento de áudio.
-    </audio>
+    <div>
+      <audio ref={audioRef} src={`${process.env.PUBLIC_URL}/images/amigo.mp3`} loop />
+      {!isPlaying && <button onClick={handlePlay}>Play Music</button>}
+    </div>
   );
 }
 

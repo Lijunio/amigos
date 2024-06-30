@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Tutorial from './components/Tutorial';
+import Parte2 from './components/Parte2';
+import Parte3 from './components/Parte3';
+import Final from './components/Final';
+import MusicPlayer from './components/MusicPlayer';
 
 function App() {
+  const [step, setStep] = useState(1);
+
+  const nextStep = () => setStep(step + 1);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MusicPlayer /> {/* Adiciona o player de música no topo */}
+      {step === 1 && <Tutorial nextStep={nextStep} />}
+      {step === 2 && <Parte2 nextStep={nextStep} />}
+      {step === 3 && <Parte3 nextStep={nextStep} />}
+      {step === 4 && <Final />}
     </div>
   );
 }
